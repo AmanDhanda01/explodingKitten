@@ -37,14 +37,14 @@ export default function GameScreen({username}) {
    
    setClickedCard(index);
    setTimeout(async () =>{
-      if(cards.length===1 && (cards[index].name==="Cat card " || cards[index].name==="Defuse card" ||(hasDefuse>0 && cards[index].name==="Exploding kitten card"))){
+      if(cards.length===1 && (cards[index].name==="Cat card" || cards[index].name==="Defuse card" ||(hasDefuse>0 && cards[index].name==="Exploding kitten card"))){
          setScore(prev =>prev+1);
          setIsStart(false);
          setHasDefuse(0);
          dispatch(emptyCards());
          await updateScore(user.username,score+1);
          toast.success("You won");
-    }else if(cards[index].name==="Cat card "){
+    }else if(cards[index].name==="Cat card"){
           dispatch(remove(index));
     }else if(cards[index].name==="Defuse card"){
            dispatch(remove(index));
@@ -74,6 +74,7 @@ export default function GameScreen({username}) {
   
         
     }
+   //  console.log
   
   
   

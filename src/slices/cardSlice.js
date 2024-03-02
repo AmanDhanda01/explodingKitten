@@ -7,7 +7,7 @@ export const cardSlice = createSlice({
   reducers: {
        getCards:(state) =>{
 
-           let cardArray = [{name:"Cat card ",logo:"/images/Cat Card.jpeg"},{name:"Defuse card",logo:"/images/DefuseCard.jpeg"},{name:"Shuffle card" ,logo:"/images/ShuffleCard.jpeg"},{name:"Exploding kitten card",logo:"/images/ExplodingCard.jpeg"}]
+           let cardArray = [{name:"Cat card",logo:"/images/CatCard.jpeg"},{name:"Defuse card",logo:"/images/DefuseCard.jpeg"},{name:"Shuffle card" ,logo:"/images/ShuffleCard.jpeg"},{name:"Exploding kitten card",logo:"/images/ExplodingCard.jpeg"}]
 
            for(let i=0;i<5;i++){
               const card = cardArray[Math.floor(Math.random()*4)]
