@@ -43,6 +43,8 @@ export default function GameScreen({username}) {
          setHasDefuse(0);
          dispatch(emptyCards());
          await updateScore(user.username,score+1);
+         const AllUser = await fetchAllUser();
+         setAllUser(AllUser)
          toast.success("You won");
     }else if(cards[index].name==="Cat card"){
           dispatch(remove(index));
